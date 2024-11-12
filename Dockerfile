@@ -14,7 +14,6 @@ RUN addgroup --system --gid 1001 nodejs \
   && yarn set version stable \
   && yarn workspaces focus --production \
   && rm -Rf ./.yarn \
-  && mkdir /app/cliq-dify-agent-proxy/data \
   && chown nextjs:nodejs -Rf /app/cliq-dify-agent-proxy
 
 USER nextjs

@@ -1,5 +1,9 @@
 # cliq-dify-agent-proxy
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mmhk/cliq-dify-agent-proxy)](https://hub.docker.com/r/mmhk/cliq-dify-agent-proxy)
+
+
 此專案是一個代理服務器，用於連接 Zoho Cliq 與 Dify.AI，實現智能對話功能。
 
 ## 功能特點

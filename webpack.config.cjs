@@ -32,7 +32,9 @@ module.exports = {
     ]),
     // 排除 node_modules 目录中的所有模块
     externals: [
-        nodeExternals(),
+        nodeExternals({
+            allowlist: [/dify\-client/i]
+        }),
     ],
 
     // 模块规则
@@ -40,7 +42,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                // exclude: /node_modules/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -55,7 +57,7 @@ module.exports = {
 
     // 优化
     optimization: {
-        minimize: false,
+        minimize: true,
         usedExports: true // 启用 Tree Shaking
     },
 
