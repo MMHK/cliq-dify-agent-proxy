@@ -23,8 +23,8 @@
 
 ## 技术栈
 
-- **Deluge**: 一个类似于 JavaScript 的脚本语言，用于编写 Bot Hook 的处理逻辑。
-- **Incoming Webhook**: 用于处理长时间运行的任务。
+- **[Deluge](https://www.zoho.com/developer/help/scripting/deluge-overview.html)**: 一个类似于 JavaScript 的脚本语言，用于编写 Bot Hook 的处理逻辑。
+- **[Incoming Webhook](https://www.zoho.com/cliq/help/platform/bot-incomingwebhookhandler.html)**: 用于处理长时间运行的任务。
 
 ## 限制与挑战
 
@@ -35,7 +35,7 @@
     - 这使得某些复杂的逻辑难以实现。
 
 2. **执行时间限制**:
-    - `invokeurl` 函数用于调用外部 API，但其执行时间有严格的限制。
+    - [invokeurl](https://www.zoho.com/cliq/help/platform/invoke-url.html) 函数用于调用外部 API，但其执行时间有严格的限制。
     - 这意味着对于需要长时间处理的任务，直接使用 `invokeurl` 可能会导致超时。
 
 3. **外部 API 调用**:
@@ -45,7 +45,7 @@
 
 为了克服上述限制，推荐使用 **Incoming Webhook** 来处理长时间运行的任务：
 
-1. **使用 Incoming Webhook**:
+1. **使用 [Incoming Webhook](https://www.zoho.com/cliq/help/platform/bot-incomingwebhookhandler.html)**:
     - 当接收到 Zoho Cliq 的消息时，可以通过 Deluge 脚本触发一个外部服务的 webhook。
     - 外部服务可以处理长时间运行的任务，并在完成后将结果发送回 Zoho Cliq。
 
