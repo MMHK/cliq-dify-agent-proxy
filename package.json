@@ -6,7 +6,6 @@
   "type": "module",
   "author": "Sam <sam@mixmedia.com>",
   "license": "Apache-2.0",
-  "packageManager": "yarn@3.6.4",
   "scripts": {
     "dev": "nodemon",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.cjs",
@@ -50,6 +49,7 @@
     "dify-client": "^2.3.2",
     "dotenv": "^16.4.5",
     "fastify": "^5.1.0",
+    "qs": "^6.13.1",
     "uuid": "^11.0.3",
     "zlib": "^1.0.5"
   },

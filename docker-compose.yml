@@ -2,12 +2,21 @@ version: '3'
 services:
   copilot:
     image: 'mmhk/cliq-dify-agent-proxy'
+    container_name: cliq-dify-agent-proxy
     ports:
       - 3004:3000
+    restart: always
     environment:
       DIFY_API_KEY: ${DIFY_API_KEY}
       DIFY_API_URL: ${DIFY_API_URL}
       ClIQ_BOT_INCOMING_URL: ${ClIQ_BOT_INCOMING_URL}
       CLIQ_WEBHOOK_TOKEN: ${CLIQ_WEBHOOK_TOKEN}
       AUTH_TOKEN: ${AUTH_TOKEN}
+  #  限制 log file 大小
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "5m"
+      max-file: "5"
+
 

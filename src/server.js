@@ -1,7 +1,6 @@
 import fastify from 'fastify';
 import {installSwagger, installSwaggerUi} from "./swagger.js";
 import {installRoutes} from "./router.js";
-import fastifyStatic from "@fastify/static";
 
 const app = fastify({
     bodyLimit: 1048576 * 10, // 10MB
